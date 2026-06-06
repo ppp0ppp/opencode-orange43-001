@@ -93,6 +93,26 @@ graphify .
 
 `graphify-out/graph.json`이 존재하면 코드베이스 질문에서 `graphify query`, `graphify path`, `graphify explain`을 우선 사용합니다.
 
+## graphify LLM Provider
+
+graphify는 입력 종류에 따라 LLM 필요 여부가 다릅니다.
+
+- 코드 파일: AST 기반 structural extraction을 로컬에서 수행하므로 LLM이 필요하지 않습니다.
+- Markdown, 일반 문서, PDF, 이미지: semantic extraction에 LLM이 필요합니다.
+- 기존 `graphify-out/graph.json`에 대한 `graphify query`, `graphify path`, `graphify explain`: 보통 CLI graph traversal 중심이라 추가 LLM 호출 없이 사용할 수 있습니다.
+
+OpenCode에서 `/graphify` skill로 실행할 때는 현재 opencode 세션의 모델/subagent가 semantic extraction을 수행할 수 있습니다. 즉, opencode에 연결된 provider를 통해 토큰을 사용하게 됩니다.
+
+단, headless CLI 방식으로 `graphify extract`를 직접 돌릴 때는 opencode provider 설정을 자동으로 읽는 것이 아니라 backend 환경변수가 필요할 수 있습니다. 현재 graphify skill 문서 기준으로 직접 backend path는 `GEMINI_API_KEY` 또는 `GOOGLE_API_KEY`를 우선 확인합니다.
+
+정리하면 다음과 같습니다.
+
+- opencode 안에서 `/graphify .`: 현재 opencode 세션의 LLM을 사용할 수 있습니다.
+- 터미널에서 `graphify .` 또는 `graphify extract`: 코드만이면 로컬 처리, 문서/이미지 semantic extraction에는 별도 backend/API key가 필요할 수 있습니다.
+- 이미지 분석은 vision-capable 모델이 필요할 수 있습니다.
+
+민감한 문서가 포함된 저장소에서는 semantic extraction 전에 backend와 외부 전송 여부를 확인합니다.
+
 ## Hook And MCP Policy
 
 git hook과 MCP 서버는 기본 활성화하지 않습니다.

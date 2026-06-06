@@ -11,7 +11,8 @@ opencode와 사용자가 장기 맥락을 Markdown으로 공유하기 위한 디
 
 ## Naming
 
-파일명은 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.
+- 보고서, 의사결정, 계약 문서는 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.
+- 세션 체크포인트는 `YYYY-MM-DD_HH-MM-SS_short-slug.md` 형식을 사용합니다.
 
 ## Policy
 

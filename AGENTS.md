@@ -21,9 +21,11 @@
 
 - opencode와 사용자가 큰 맥락을 Markdown으로 주고받을 때는 `.opencode-context/`를 기준 디렉토리로 사용합니다.
 - 보고서는 `.opencode-context/reports/`, 의사결정 기록은 `.opencode-context/decisions/`, 세션 체크포인트는 `.opencode-context/sessions/`, 계약/스키마 문서는 `.opencode-context/contracts/`에 둡니다.
-- 파일명은 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.
-- 장기 맥락이 필요한 작업을 시작하기 전에는 관련 `.opencode-context/` 문서를 먼저 확인합니다.
-- 중요한 설계 판단, 중단 전 상태, 다음 작업 인계가 필요하면 Markdown 체크포인트를 남깁니다.
+- 보고서, 의사결정, 계약 문서는 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.
+- 세션 체크포인트는 `.opencode-context/sessions/YYYY-MM-DD_HH-MM-SS_short-slug.md` 형식을 사용합니다.
+- 새 세션이나 장기 작업을 시작할 때는 가장 최근 세션 파일 1개를 먼저 확인하고, 필요한 경우에만 과거 세션을 검색해서 읽습니다.
+- 세션 파일은 대화 전문이 아니라 goal, 상태, 완료 작업, 다음 단계, 열린 질문, 중요 파일, 실행 명령 중심으로 짧게 유지합니다.
+- 중요한 설계 판단, 하루 단위 작업 종료, 큰 작업 단위 종료, 중단 전 상태, 다음 작업 인계가 필요하면 Markdown 체크포인트를 남깁니다.
 
 ## Contract Boundaries
 

@@ -81,11 +81,11 @@
     },
     "checkpoint": {
       "description": "Write a session checkpoint under .opencode-context/sessions.",
-      "template": "Create a concise Markdown checkpoint under .opencode-context/sessions/ using the next 3-digit sequence number and a short kebab-case title. Include current goal, completed work, changed files, verification status, blockers, and next steps."
+      "template": "Create a concise Markdown checkpoint under .opencode-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Include goal, current status, completed work, next steps, open questions, important files, commands run, and risks/notes. Keep it as a checkpoint, not a full transcript."
     },
     "handoff": {
       "description": "Write a handoff note for continuing work later.",
-      "template": "Create a Markdown handoff note under .opencode-context/sessions/ using the next 3-digit sequence number and a short kebab-case title. Prioritize what another session needs to continue safely: current state, important decisions, unresolved questions, exact next actions, and commands already run."
+      "template": "Create a Markdown handoff note under .opencode-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Prioritize what another session needs to continue safely: current goal, state, important decisions, unresolved questions, exact next actions, important files, and commands already run."
     },
     "decision": {
       "description": "Record an architectural or harness decision.",
