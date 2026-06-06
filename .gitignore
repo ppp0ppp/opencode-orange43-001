@@ -1,0 +1,16 @@
+# opencode
+.opencode/node_modules/
+
+# graphify local-only outputs
+graphify-out/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
