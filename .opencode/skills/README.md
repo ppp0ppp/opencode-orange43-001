@@ -15,4 +15,5 @@
 - `git`: Conventional Commits와 브랜치/병합 흐름
 - `git-worktree`: worktree 기반 환경 분리
 - `tidy-tdd-first`: TDD와 Tidy First 개발 흐름
+- `simplify`: 동작 보존 코드 단순화와 readability 개선
 - `graphify`: knowledge graph 생성과 query/path/explain 사용

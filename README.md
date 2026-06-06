@@ -16,5 +16,7 @@
 
 - `.opencode-context/reports/003-bootstrap-installation-guide.md`
 - `.opencode-context/reports/004-oh-my-opencode-slim-adoption.md`
+- `.opencode-context/reports/005-oh-my-opencode-slim-diff.md`
+- `.opencode-context/reports/006-slim-absorption-branch.md`
 
 설정 변경 후에는 opencode를 재시작해야 합니다.
