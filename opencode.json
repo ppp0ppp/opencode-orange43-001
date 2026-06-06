@@ -1,0 +1,104 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "logLevel": "INFO",
+  "model": "openai/gpt-5.5",
+  "small_model": "openai/gpt-5.5",
+  "share": "manual",
+  "autoupdate": "notify",
+  "snapshot": true,
+  "plugin": [".opencode/plugins/graphify.js"],
+  "instructions": ["AGENTS.md"],
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
+  "watcher": {
+    "ignore": [
+      ".git/**",
+      ".opencode/node_modules/**",
+      ".opencode/package-lock.json",
+      "graphify-out/**"
+    ]
+  },
+  "permission": {
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "edit": "ask",
+    "task": "allow",
+    "todowrite": "allow",
+    "question": "allow",
+    "webfetch": "ask",
+    "websearch": "ask",
+    "skill": "allow",
+    "external_directory": {
+      "*": "ask",
+      "~/.ssh/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/secrets/**": "deny"
+    },
+    "bash": {
+      "*": "ask",
+      "ls*": "allow",
+      "pwd": "allow",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git branch*": "allow",
+      "npm test*": "allow",
+      "pnpm test*": "allow",
+      "bun test*": "allow",
+      "pytest*": "allow",
+      "rm *": "deny",
+      "rm -rf *": "deny",
+      "git reset --hard*": "deny",
+      "git clean *": "deny",
+      "git checkout -- *": "deny",
+      "git restore *": "deny",
+      "sudo *": "deny"
+    }
+  },
+  "agent": {
+    "plan": {
+      "permission": {
+        "edit": "deny"
+      }
+    },
+    "build": {
+      "permission": {
+        "edit": "ask"
+      }
+    }
+  },
+  "command": {
+    "review": {
+      "description": "Review current changes for defects and regressions.",
+      "template": "Review the current changes with a code-review mindset. Prioritize bugs, behavioral regressions, security risks, and missing tests. Return findings first with file and line references."
+    },
+    "plan-change": {
+      "description": "Create a concise implementation plan before editing.",
+      "template": "Analyze the requested change and produce a concise implementation plan. Include assumptions, likely files to touch, verification steps, and risks. Do not edit files."
+    },
+    "checkpoint": {
+      "description": "Write a session checkpoint under .opencode-context/sessions.",
+      "template": "Create a concise Markdown checkpoint under .opencode-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Include goal, current status, completed work, next steps, open questions, important files, commands run, and risks/notes. Keep it as a checkpoint, not a full transcript."
+    },
+    "handoff": {
+      "description": "Write a handoff note for continuing work later.",
+      "template": "Create a Markdown handoff note under .opencode-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Prioritize what another session needs to continue safely: current goal, state, important decisions, unresolved questions, exact next actions, important files, and commands already run."
+    },
+    "decision": {
+      "description": "Record an architectural or harness decision.",
+      "template": "Create a concise decision record under .opencode-context/decisions/ using the next 3-digit sequence number and a short kebab-case title. Include context, decision, rationale, alternatives considered, consequences, and follow-up verification."
+    }
+  },
+  "tool_output": {
+    "max_lines": 2000,
+    "max_bytes": 51200
+  },
+  "compaction": {
+    "auto": true,
+    "tail_turns": 4,
+    "prune": true
+  }
+}
