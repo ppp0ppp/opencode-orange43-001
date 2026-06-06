@@ -9,13 +9,15 @@
 - `PROJECT.md`: 사용자가 미리 채우는 프로젝트 목표, 환경, 스택, 개발 철학
 - `.opencode/skills/`: 로컬 skill
 - `.opencode/plugins/`: 로컬 plugin
-- `.opencode-context/`: 보고서, 논의, 의사결정, 세션 체크포인트, 계약 문서
+- `.opencode-context/`: 보고서, 논의, 의사결정, 세션 체크포인트, 계약 문서, 사용자 제공 입력 자료
 
 ## Project Setup
 
 새 프로젝트에 이 템플릿을 적용할 때는 `PROJECT.md`를 먼저 채웁니다.
 
 필수로 정하기 어려운 항목은 `미정`으로 남기고, 작업자가 추측하면 안 되는 항목은 `Open Questions (열린 질문)`에 적습니다.
+
+사용자가 디버깅 스크린샷, 이미지, PDF, 로그, 텍스트 덤프를 하네스/에이전트에 제공할 때는 `.opencode-context/inbox/`를 임시 입력 저장소로 사용합니다. 장기 보존할 참조 자료는 민감정보를 제거한 뒤 `.opencode-context/assets/`로 승격합니다.
 
 ## 환경 설정
 

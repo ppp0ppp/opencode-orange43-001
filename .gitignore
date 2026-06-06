@@ -4,6 +4,11 @@
 # graphify local-only outputs
 graphify-out/
 
+# User-provided transient harness inputs
+.opencode-context/inbox/**
+!.opencode-context/inbox/
+!.opencode-context/inbox/README.md
+
 # Python-generated files
 __pycache__/
 *.py[oc]

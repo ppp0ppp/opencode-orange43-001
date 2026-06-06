@@ -21,13 +21,24 @@
 
 - 프로젝트별 목표, 환경, 스택, 개발 철학, 제약은 가능하면 루트 `PROJECT.md`에 사용자가 미리 기록합니다.
 - 새 프로젝트 세팅이나 장기 작업을 시작할 때 `PROJECT.md`가 있으면 먼저 확인하고, 비어 있거나 모호한 필수 항목은 사용자에게 질문합니다.
-- opencode와 사용자가 큰 맥락을 Markdown으로 주고받을 때는 `.opencode-context/`를 기준 디렉토리로 사용합니다.
+- opencode와 사용자가 큰 맥락을 Markdown이나 파일로 주고받을 때는 `.opencode-context/`를 기준 디렉토리로 사용합니다.
 - 보고서는 `.opencode-context/reports/`, 논의 과정은 `.opencode-context/discussions/`, 의사결정 기록은 `.opencode-context/decisions/`, 세션 체크포인트는 `.opencode-context/sessions/`, 계약/스키마 문서는 `.opencode-context/contracts/`에 둡니다.
+- 사용자가 제공한 임시 입력 파일, 스크린샷, 이미지, PDF, 로그, 텍스트 덤프는 `.opencode-context/inbox/`에 둡니다.
+- 장기 보존할 참조 자료는 민감정보를 제거한 뒤 `.opencode-context/assets/`로 승격하고, 공식 문서가 된 자료는 `docs/`로 옮깁니다.
+- `.opencode-context/inbox/`의 실제 입력 파일은 기본적으로 커밋하지 않는 임시 자료로 보고, 외부 모델이나 VLM 분석에 사용하기 전 민감정보 포함 여부를 확인합니다.
 - 보고서, 의사결정, 계약 문서는 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.
 - 논의 파일과 세션 체크포인트는 `.opencode-context/discussions/YYYY-MM-DD_HH-MM-SS_short-slug.md`, `.opencode-context/sessions/YYYY-MM-DD_HH-MM-SS_short-slug.md` 형식을 사용합니다.
 - 새 세션이나 장기 작업을 시작할 때는 가장 최근 세션 파일 1개를 먼저 확인하고, 필요한 경우에만 과거 세션을 검색해서 읽습니다.
 - 세션 파일은 대화 전문이 아니라 goal, 상태, 완료 작업, 다음 단계, 열린 질문, 중요 파일, 실행 명령 중심으로 짧게 유지합니다.
 - 중요한 설계 판단, 하루 단위 작업 종료, 큰 작업 단위 종료, 중단 전 상태, 다음 작업 인계가 필요하면 Markdown 체크포인트를 남깁니다.
+
+## User Input Files
+
+- 사용자가 외부 파일이나 캡처 이미지를 제공하면 우선 `.opencode-context/inbox/YYYY-MM-DD/` 아래에 둔 것으로 간주합니다.
+- 이미지, PDF, 문서가 실제 vision 또는 multimodal 입력으로 처리되는지는 현재 provider/model 지원 여부에 따릅니다.
+- CLI에서 파일 첨부가 필요하면 `opencode run --file <path> "<prompt>"` 형태를 사용할 수 있습니다.
+- 파일을 읽거나 분석한 뒤 세션 체크포인트에는 원자료 전문이 아니라 목적, 경로, 분석 결과, 후속 조치만 짧게 남깁니다.
+- 보존 가치가 있는 파일은 `.opencode-context/assets/`로 옮기기 전에 민감정보, 토큰, 개인정보, 내부 URL을 제거하거나 마스킹합니다.
 
 ## Architecture Discussions
 
