@@ -5,6 +5,7 @@ opencode와 사용자가 장기 맥락을 Markdown으로 공유하기 위한 디
 ## Structure
 
 - `reports/`: 분석 보고서, 검토 결과, 도입 전략
+- `discussions/`: 결정 전 아키텍처 협의 과정, 후보안, 질문, 트레이드오프
 - `decisions/`: 의사결정 기록과 ADR
 - `sessions/`: 세션 체크포인트, 인계 메모
 - `contracts/`: API, DB, 이벤트, public interface, 모듈 경계 문서
@@ -12,11 +13,14 @@ opencode와 사용자가 장기 맥락을 Markdown으로 공유하기 위한 디
 ## Naming
 
 - 보고서, 의사결정, 계약 문서는 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.
+- 논의 파일은 `YYYY-MM-DD_HH-MM-SS_short-slug.md` 형식을 사용합니다.
 - 세션 체크포인트는 `YYYY-MM-DD_HH-MM-SS_short-slug.md` 형식을 사용합니다.
 
 ## Policy
 
 계약 경계면을 변경할 때는 `.opencode-context/contracts/`의 문서를 먼저 확인하고, 수정 전 사용자 승인을 받아야 합니다.
+
+아키텍처, 기술 스택, 개발 철학, 운영 방식처럼 결정 전 논의가 필요한 내용은 `.opencode-context/discussions/`에 먼저 기록하고, 확정된 판단만 필요 시 `.opencode-context/decisions/`로 승격합니다.
 
 ## Bootstrap
 

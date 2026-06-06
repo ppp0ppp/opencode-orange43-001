@@ -20,12 +20,21 @@
 ## Context Files
 
 - opencode와 사용자가 큰 맥락을 Markdown으로 주고받을 때는 `.opencode-context/`를 기준 디렉토리로 사용합니다.
-- 보고서는 `.opencode-context/reports/`, 의사결정 기록은 `.opencode-context/decisions/`, 세션 체크포인트는 `.opencode-context/sessions/`, 계약/스키마 문서는 `.opencode-context/contracts/`에 둡니다.
+- 보고서는 `.opencode-context/reports/`, 논의 과정은 `.opencode-context/discussions/`, 의사결정 기록은 `.opencode-context/decisions/`, 세션 체크포인트는 `.opencode-context/sessions/`, 계약/스키마 문서는 `.opencode-context/contracts/`에 둡니다.
 - 보고서, 의사결정, 계약 문서는 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.
-- 세션 체크포인트는 `.opencode-context/sessions/YYYY-MM-DD_HH-MM-SS_short-slug.md` 형식을 사용합니다.
+- 논의 파일과 세션 체크포인트는 `.opencode-context/discussions/YYYY-MM-DD_HH-MM-SS_short-slug.md`, `.opencode-context/sessions/YYYY-MM-DD_HH-MM-SS_short-slug.md` 형식을 사용합니다.
 - 새 세션이나 장기 작업을 시작할 때는 가장 최근 세션 파일 1개를 먼저 확인하고, 필요한 경우에만 과거 세션을 검색해서 읽습니다.
 - 세션 파일은 대화 전문이 아니라 goal, 상태, 완료 작업, 다음 단계, 열린 질문, 중요 파일, 실행 명령 중심으로 짧게 유지합니다.
 - 중요한 설계 판단, 하루 단위 작업 종료, 큰 작업 단위 종료, 중단 전 상태, 다음 작업 인계가 필요하면 Markdown 체크포인트를 남깁니다.
+
+## Architecture Discussions
+
+- 아키텍처, 기술 스택, 개발 철학, 운영 방식처럼 뒤집힐 수 있는 협의 과정은 `.opencode-context/discussions/`에 기록합니다.
+- discussions는 결정 전 사고 과정, 후보안, 질문, 트레이드오프, 현재 선호안을 담습니다.
+- 확정된 결정은 필요 시 `.opencode-context/decisions/`로 승격해 별도 기록합니다.
+- sessions에는 discussion 전문을 올리지 않고, 필요한 경우 관련 파일 경로와 현재 결론만 짧게 기록합니다.
+- 논의에는 목표, 배경, 범위, 환경, 언어/버전/프레임워크, 개발 사상, 제약, 대안, 리스크, 검증 계획을 가능한 한 명시합니다.
+- 목표, 성공 기준, 계약 경계, 기술 선택, 운영 영향, 보안/비용/성능 리스크가 불명확하면 작업자는 추측하지 말고 사용자에게 질문합니다.
 
 ## Contract Boundaries
 
