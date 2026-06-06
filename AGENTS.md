@@ -38,6 +38,13 @@
 - 논의에는 목표, 배경, 범위, 환경, 언어/버전/프레임워크, 개발 사상, 제약, 대안, 리스크, 검증 계획을 가능한 한 명시합니다.
 - 목표, 성공 기준, 계약 경계, 기술 선택, 운영 영향, 보안/비용/성능 리스크가 불명확하면 작업자는 추측하지 말고 사용자에게 질문합니다.
 
+## Environment Setup
+
+- 환경 설정은 타겟 OS 실행자, opencode 도구 실행 환경, 개발 타겟 환경으로 구분합니다.
+- opencode 도구 실행 환경은 `opencode.json`, `.opencode/skills/`, `.opencode/plugins/`, `.opencode/agents/`, hook, MCP 서버가 실제로 요구하는 CLI와 버전을 기준으로 확인합니다.
+- 개발 타겟 환경은 루트 `PROJECT.md`를 기준으로 확인하고, 언어/프레임워크/DB/복합 앱 구조가 미정이면 `.opencode-context/discussions/`에 먼저 논의합니다.
+- 이 템플릿의 Python/`uv` 사용은 opencode 보조 도구 설치나 템플릿 유지보수 목적일 수 있으므로, 사용자 확인 없이 개발 타겟의 필수 런타임으로 간주하지 않습니다.
+
 ## Contract Boundaries
 
 - API 스키마, DB 스키마, 이벤트 포맷, public interface, 모듈 경계, 인증/권한 경계는 계약 경계면으로 간주합니다.
@@ -92,15 +99,15 @@
 - 검증을 실행하지 못했거나 생략했다면 이유를 명확히 말합니다.
 - 최종 응답에는 변경 파일과 검증 결과를 짧게 포함합니다.
 
-## graphify
+## Graphify Policy
 
-This project can use a local graphify knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+이 프로젝트는 `graphify-out/`의 로컬 graphify knowledge graph를 사용할 수 있습니다. graph에는 god node, community structure, 파일 간 관계가 포함될 수 있습니다.
 
-When the user types `/graphify`, invoke the `skill` tool with `skill: "graphify"` before doing anything else.
+사용자가 `/graphify`를 입력하면 다른 작업보다 먼저 `skill` 도구를 `skill: "graphify"`로 호출합니다.
 
-Rules:
-- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
-- Dirty graphify-out/ files are expected after hooks or incremental updates; dirty graph files are not a reason to skip graphify. Only skip graphify if the task is about stale or incorrect graph output, or the user explicitly says not to use it.
-- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
-- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
-- After modifying code, run `graphify update .` when graphify-out/graph.json exists to keep the graph current (AST-only, no API cost).
+규칙:
+- 코드베이스 질문에서는 `graphify-out/graph.json`이 있으면 먼저 `graphify query "<question>"`를 실행합니다. 관계 확인에는 `graphify path "<A>" "<B>"`, 특정 개념 확인에는 `graphify explain "<concept>"`를 사용합니다. 이 명령들은 보통 `GRAPH_REPORT.md`나 raw grep 결과보다 작은 scoped subgraph를 반환합니다.
+- hook이나 incremental update 뒤에는 `graphify-out/` 파일이 dirty 상태일 수 있습니다. dirty graph 파일만으로 graphify 사용을 건너뛰지 않습니다. stale/incorrect graph output 자체가 작업 대상이거나 사용자가 명시적으로 사용하지 말라고 한 경우에만 건너뜁니다.
+- `graphify-out/wiki/index.md`가 있으면 넓은 탐색에는 raw source browsing보다 이 파일을 먼저 사용합니다.
+- `graphify-out/GRAPH_REPORT.md`는 넓은 아키텍처 리뷰가 필요하거나 query/path/explain 결과만으로 맥락이 부족할 때만 읽습니다.
+- 코드 수정 후 `graphify-out/graph.json`이 있으면 graph를 최신 상태로 유지하기 위해 `graphify update .`를 실행합니다. 이 업데이트는 AST-only이며 API 비용이 없습니다.

@@ -18,11 +18,13 @@
 
 - opencode CLI
 - Git
-- Python 3.10 이상
-- `uv` 또는 `pipx`
 - graphify CLI 패키지 `graphifyy`
+- graphify CLI 설치용 Python 3.10 이상
+- graphify CLI 설치용 `uv` 또는 `pipx`
 
 현재 확인된 graphify CLI 버전은 `0.8.32`입니다.
+
+여기서의 Python과 `uv`/`pipx`는 opencode 보조 도구인 graphify CLI 설치를 위한 요구사항입니다. 실제 개발 타겟의 언어, 런타임, 프레임워크 요구사항은 루트 `PROJECT.md`에 별도로 기록합니다.
 
 ## 새 환경 설치 순서
 

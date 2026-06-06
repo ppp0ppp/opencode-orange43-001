@@ -22,11 +22,31 @@
 
 예: 로컬 Linux, Docker Compose, 단일 VPS 배포, PostgreSQL managed DB.
 
+## Environment Setup (환경 설정)
+
+프로젝트를 실행하기 위해 준비해야 하는 환경을 3단계로 나누어 적습니다.
+
+### Target OS Runners (타겟 OS 실행자)
+
+OS별 shell, Git, 패키지 매니저, Docker, 언어 버전 관리자, PATH 설정을 적습니다.
+
+### opencode Tool Runners (opencode 도구 실행자)
+
+opencode, 로컬 skill/plugin/hook/MCP/agent 사용에 필요한 CLI와 버전을 적습니다.
+
+예: opencode CLI, Git, graphify CLI, graphify 설치용 Python 3.10 이상과 `uv` 또는 `pipx`.
+
+### Development Target (개발 타겟)
+
+실제 앱을 실행하고 테스트하기 위한 언어, 프레임워크, DB, 외부 서비스, 여러 앱의 실행 순서를 적습니다.
+
+예: backend는 Python/FastAPI, frontend는 Vite/TypeScript, worker는 LangGraph, DB는 PostgreSQL.
+
 ## Stack (언어/버전/프레임워크)
 
 언어, 런타임 버전, 프레임워크, 주요 라이브러리, 패키지 매니저를 적습니다.
 
-예: Python 3.12, FastAPI, PostgreSQL 16, uv.
+예: Python 3.12, FastAPI, PostgreSQL 16, 패키지 매니저 미정.
 
 ## Philosophy (개발 사상/철학)
 
