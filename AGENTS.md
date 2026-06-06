@@ -19,6 +19,8 @@
 
 ## Context Files
 
+- 프로젝트별 목표, 환경, 스택, 개발 철학, 제약은 가능하면 루트 `PROJECT.md`에 사용자가 미리 기록합니다.
+- 새 프로젝트 세팅이나 장기 작업을 시작할 때 `PROJECT.md`가 있으면 먼저 확인하고, 비어 있거나 모호한 필수 항목은 사용자에게 질문합니다.
 - opencode와 사용자가 큰 맥락을 Markdown으로 주고받을 때는 `.opencode-context/`를 기준 디렉토리로 사용합니다.
 - 보고서는 `.opencode-context/reports/`, 논의 과정은 `.opencode-context/discussions/`, 의사결정 기록은 `.opencode-context/decisions/`, 세션 체크포인트는 `.opencode-context/sessions/`, 계약/스키마 문서는 `.opencode-context/contracts/`에 둡니다.
 - 보고서, 의사결정, 계약 문서는 `001-short-title.md`처럼 3자리 순번과 짧은 kebab-case 제목을 사용합니다.

@@ -1,4 +1,4 @@
-# Sessions
+# Sessions (세션 체크포인트)
 
 opencode 세션 중단, 작업 인계, 체크포인트를 Markdown으로 기록하는 위치입니다.
 
@@ -26,21 +26,37 @@ YYYY-MM-DD_HH-MM-SS_short-slug.md
 ## Template
 
 ```md
-# Session Checkpoint
+# Session Checkpoint (세션 체크포인트)
 
-## Goal
+## Goal (목표)
 
-## Current Status
+이번 세션 또는 작업 단위의 목표를 적습니다.
 
-## Completed
+## Current Status (현재 상태)
 
-## Next Steps
+지금 어디까지 진행됐고, 무엇이 남았는지 적습니다.
 
-## Open Questions
+## Completed (완료한 작업)
 
-## Important Files
+완료한 변경, 검증, 결정 사항을 적습니다.
 
-## Commands Run
+## Next Steps (다음 단계)
 
-## Risks / Notes
+다음 작업자가 바로 이어서 할 일을 적습니다.
+
+## Open Questions (열린 질문)
+
+사용자 확인이 필요하거나 아직 정하지 못한 질문을 적습니다.
+
+## Important Files (중요 파일)
+
+다음 작업자가 먼저 확인해야 할 파일 경로를 적습니다.
+
+## Commands Run (실행한 명령)
+
+중요한 검증, 빌드, 테스트 명령과 결과를 적습니다.
+
+## Risks / Notes (리스크/메모)
+
+주의해야 할 리스크, 미해결 이슈, 관련 discussion/decision 경로를 적습니다.
 ```
