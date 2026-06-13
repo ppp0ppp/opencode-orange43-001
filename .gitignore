@@ -8,6 +8,7 @@ graphify-out/
 .opencode-context/inbox/**
 !.opencode-context/inbox/
 !.opencode-context/inbox/README.md
+!.opencode-context/inbox/.gitkeep
 
 # Python-generated files
 __pycache__/
