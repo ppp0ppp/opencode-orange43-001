@@ -10,6 +10,8 @@
 - `open/`: 사용자와 에이전트가 질문/답변과 수정으로 완성 중인 문서
 - `closed/`: 논의가 끝났고 공식 문서로 흡수된 문서
 
+계획 작성 중에는 `draft/`와 `open/` 논의를 기본 참조할 수 있습니다. `closed/` 논의는 히스토리와 근거이며, 사용자가 명시하거나 에이전트가 참조 이유를 설명해 승인받은 경우에만 참조합니다.
+
 논의 문서의 디렉토리 상태와 본문 `Status (상태)`는 항상 일치해야 합니다. 상태 이동 시 파일명은 바꾸지 않고 최초 생성 시각을 유지합니다.
 
 ## Naming (이름 규칙)
@@ -117,6 +119,7 @@ YYYY-MM-DD_HH-MM-SS_detail-title/
 
 - 논의 결과가 어디로 흡수됐는지 적습니다.
 - `closed` 논의 문서에서는 필수입니다.
+- `closed` 논의 문서는 실행 기준이 아니므로, 계속 필요한 결론은 공식 문서나 계획서로 흡수되어 있어야 합니다.
 
 `References (근거 및 영향 문서)`:
 
@@ -138,3 +141,4 @@ Closed:
 - `.project-context/discussions/closed/2026-06-13_12-13-55_context-directory-rename.md`: context 디렉토리 이름 변경
 - `.project-context/discussions/closed/2026-06-13_12-49-18_path-reference-style.md`: 문서 경로 표기 방식
 - `.project-context/discussions/closed/2026-06-13_13-17-01_large-work-breakdown-tracking.md`: 대형 작업의 논의와 계획 분할 관리
+- `.project-context/discussions/closed/2026-06-13_14-02-12_execution-authority-workflow.md`: 실행 권한 계층과 README 워크플로우 표현
