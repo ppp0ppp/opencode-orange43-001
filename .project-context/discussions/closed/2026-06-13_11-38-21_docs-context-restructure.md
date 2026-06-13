@@ -27,7 +27,7 @@ closed
 - `.opencode-context/decisions` 삭제 여부와 영향 정리
 - `.opencode-context/contracts`를 `docs/contracts`로 이동하는 방안
 - `docs/architectures` 신설 방안
-- `docs/plans` 및 `scheduled`, `open`, `closed` 하위 상태 디렉토리 신설 방안
+- `docs/plans` 및 `scheduled`, `doing`, `archived` 하위 상태 디렉토리 신설 방안
 - `.opencode-context/discussions`를 `draft`, `open`, `closed` 하위 상태 디렉토리로 재정렬하는 방안
 - README와 `AGENTS.md` 정합성 수정 방안
 
@@ -98,7 +98,7 @@ closed
 
 논의 결과는 실행 계획서와 공식 README, `AGENTS.md` 갱신으로 흡수했습니다.
 
-실행 계획서는 `docs/plans/closed/2026-06-13_11-28-02_docs-context-restructure.md`에 작성했고, 실제 구조 개편 승인 후 완료했습니다.
+실행 계획서는 `docs/plans/archived/2026-06-13_11-28-02_docs-context-restructure.md`에 작성했고, 실제 구조 개편 승인 후 완료했습니다.
 
 ## Absorption Target (흡수 대상)
 
@@ -119,7 +119,7 @@ closed
 
 - `.opencode-context/reports/008-docs-context-structure-consistency.md`
 - `.opencode-context/reports/009-plan-discussion-section-policy.md`
-- `docs/plans/closed/2026-06-13_11-28-02_docs-context-restructure.md`
+- `docs/plans/archived/2026-06-13_11-28-02_docs-context-restructure.md`
 - `.opencode-context/decisions/001-opencode-context-directory.md`
 
 영향:

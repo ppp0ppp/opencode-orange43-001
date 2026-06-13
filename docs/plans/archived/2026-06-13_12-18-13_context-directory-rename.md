@@ -2,9 +2,9 @@
 
 ## Status (상태)
 
-closed
+archived
 
-이 계획서는 모든 항목이 완료되어 닫힌 계획서입니다.
+이 계획서는 모든 항목이 완료되어 보관된 계획서입니다.
 
 ## Summary (요약)
 
@@ -31,7 +31,7 @@ closed
 - `.project-context/discussions/README.md`, reports/assets/sessions README의 현재 정책 경로를 점검하고 필요한 경우 갱신합니다.
 - `docs/README.md`, `docs/plans/README.md` 등 현재 정책 문서 목록에서 새 경로가 필요한 부분을 갱신합니다.
 - rename 논의 문서를 사용자 답변 기준으로 정리하고 `closed`로 이동합니다.
-- 이 계획서를 승인 후 `open`, 완료 후 `closed`로 이동합니다.
+- 이 계획서를 승인 후 `doing`, 완료 후 `archived`로 이동합니다.
 
 제외:
 
@@ -83,7 +83,7 @@ closed
 
 - [x] 1. 승인 후 착수
 - [x] 1.1. `git status` 확인
-- [x] 1.2. 계획서를 `docs/plans/open/`으로 이동하고 `Status`를 `open`으로 변경
+- [x] 1.2. 계획서를 `docs/plans/doing/`으로 이동하고 `Status`를 `doing`으로 변경
 - [x] 2. 디렉토리 이동
 - [x] 2.1. `.opencode-context/`를 `.project-context/`로 이동
 - [x] 2.2. 이전 `.opencode-context/` 경로가 남지 않았는지 확인
@@ -98,7 +98,7 @@ closed
 - [x] 4.2. 논의 문서의 `Status`, `Resolution`, `Absorption Target` 갱신
 - [x] 5. 완료 처리
 - [x] 5.1. 계획 체크리스트 갱신
-- [x] 5.2. 계획서를 `docs/plans/closed/`로 이동
+- [x] 5.2. 계획서를 `docs/plans/archived/`로 이동
 - [x] 6. 검증
 - [x] 6.1. 현재 정책 파일에서 `.opencode-context` 잔여 경로 검색
 - [x] 6.2. `opencode debug config` 실행
@@ -107,7 +107,7 @@ closed
 ## Checklist (전체 체크리스트)
 
 - [x] CL-001: 승인 후 `git status` 확인 (done)
-- [x] CL-002: 계획서를 `docs/plans/open/`으로 이동하고 `Status`를 `open`으로 변경 (done)
+- [x] CL-002: 계획서를 `docs/plans/doing/`으로 이동하고 `Status`를 `doing`으로 변경 (done)
 - [x] CL-003: `.opencode-context/`를 `.project-context/`로 이동 (done)
 - [x] CL-004: 이전 `.opencode-context/` 경로가 제거됐는지 확인 (done)
 - [x] CL-005: `.project-context/README.md` 정의와 경로 갱신 (done)
@@ -123,7 +123,7 @@ closed
 - [x] CL-015: 과거 완료 문서의 역사적 `.opencode-context` 언급은 보존 대상인지 확인 (done)
 - [x] CL-016: `opencode debug config` 실행 (done)
 - [x] CL-017: 최종 `git status --short` 확인 (done)
-- [x] CL-018: 계획서를 `docs/plans/closed/`로 이동하고 결과 기록 (done)
+- [x] CL-018: 계획서를 `docs/plans/archived/`로 이동하고 결과 기록 (done)
 
 ## Verification (검증)
 
@@ -163,7 +163,7 @@ opencode debug config
 - 2026-06-13: 사용자가 이전 `.opencode-context` 경로에 symlink나 안내 파일을 남기지 않고 완전히 제거하기로 결정했습니다.
 - 2026-06-13: `.gitkeep` 정리 변경과 rename 논의 초안은 먼저 커밋했습니다.
 - 2026-06-13: rename 논의 문서를 사용자 답변 기준으로 닫고, 이 계획서로 결론을 흡수했습니다.
-- 2026-06-13: 사용자 승인 후 이 계획서를 `docs/plans/open/`으로 이동하고 상태를 `open`으로 변경했습니다.
+- 2026-06-13: 사용자 승인 후 이 계획서를 `docs/plans/doing/`으로 이동하고 상태를 `doing`으로 변경했습니다.
 - 2026-06-13: `.opencode-context/`를 `.project-context/`로 이동하고 현재 정책/설정 경로를 갱신했습니다.
 
 ## Result (결과)
@@ -194,4 +194,4 @@ opencode debug config
 - `.gitignore`
 - `docs/README.md`
 - `docs/plans/README.md`
-- `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`
+- `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`

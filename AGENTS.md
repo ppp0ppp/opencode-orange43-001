@@ -23,7 +23,7 @@
 - 새 프로젝트 세팅이나 장기 작업을 시작할 때 `PROJECT.md`가 있으면 먼저 확인하고, 비어 있거나 모호한 필수 항목은 사용자에게 질문합니다.
 - opencode와 사용자가 큰 맥락을 Markdown이나 파일로 주고받을 때는 `.project-context/`를 기준 디렉토리로 사용합니다.
 - 보고서는 `.project-context/reports/`, 논의 과정은 `.project-context/discussions/{draft|open|closed}/`, 세션 체크포인트는 `.project-context/sessions/`에 둡니다.
-- 공식 계약 문서는 `docs/contracts/`, 공식 아키텍처 문서는 `docs/architectures/`, 공식 계획 문서는 `docs/plans/{scheduled|open|closed}/`에 둡니다.
+- 공식 계약 문서는 `docs/contracts/`, 공식 아키텍처 문서는 `docs/architectures/`, 공식 계획 문서는 `docs/plans/{scheduled|doing|archived}/`에 둡니다.
 - 사용자가 제공한 임시 입력 파일, 스크린샷, 이미지, PDF, 로그, 텍스트 덤프는 `.project-context/inbox/`에 둡니다.
 - 장기 보존할 참조 자료는 민감정보를 제거한 뒤 `.project-context/assets/`로 승격하고, 공식 문서가 된 자료는 `docs/`로 옮깁니다.
 - `.project-context/inbox/`의 실제 입력 파일은 기본적으로 커밋하지 않는 임시 자료로 보고, 외부 모델이나 VLM 분석에 사용하기 전 민감정보 포함 여부를 확인합니다.

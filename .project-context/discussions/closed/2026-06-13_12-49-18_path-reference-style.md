@@ -12,7 +12,7 @@ closed
 
 ## Background (배경)
 
-문서 구조를 `docs/`와 `.project-context/` 중심으로 재정리하면서 여러 문서가 서로를 참조하게 되었습니다. 계획서와 논의 문서는 `scheduled`, `open`, `closed` 상태 디렉토리 사이를 이동하고, `.project-context/` 문서도 추후 이름이나 위치가 바뀔 수 있습니다.
+문서 구조를 `docs/`와 `.project-context/` 중심으로 재정리하면서 여러 문서가 서로를 참조하게 되었습니다. 계획서는 `scheduled`, `doing`, `archived` 상태 디렉토리 사이를 이동하고, 논의 문서는 `draft`, `open`, `closed` 상태 디렉토리 사이를 이동하며, `.project-context/` 문서도 추후 이름이나 위치가 바뀔 수 있습니다.
 
 이 상황에서 문서 위치 기준 상대 링크는 클릭 가능성은 좋지만, 문서 이동 시 쉽게 깨질 수 있습니다. 반대로 `docs/...` 같은 루트 기준 경로는 Markdown 렌더러에서 자동 링크가 되지 않을 수 있지만 사람이 읽고 검색하기 좋습니다.
 
@@ -22,7 +22,7 @@ closed
 
 - `docs/contracts/`
 - `docs/architectures/`
-- `docs/plans/{scheduled|open|closed}/`
+- `docs/plans/{scheduled|doing|archived}/`
 - `.project-context/discussions/{draft|open|closed}/`
 - `.project-context/reports/`
 - `.project-context/sessions/`
@@ -35,7 +35,7 @@ closed
 
 - `docs/contracts/README.md`
 - `.project-context/discussions/closed/2026-06-13_12-13-55_context-directory-rename.md`
-- `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`
+- `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`
 
 일부 README에는 해당 README 기준의 짧은 경로가 있었지만, 최종 정책에서는 허용하지 않습니다.
 
@@ -113,7 +113,7 @@ closed
 옵션 D: README 문서 목록은 해당 README 기준 짧은 상대 경로, 본문과 정책은 루트 기준 경로 사용
 
 - 예: `docs/plans/README.md`의 목록에는 `closed/2026-...md`
-- 예: 다른 문서에서 참조할 때는 `docs/plans/closed/2026-...md`
+- 예: 다른 문서에서 참조할 때는 `docs/plans/archived/2026-...md`
 
 ## Trade-offs (트레이드오프)
 
@@ -139,19 +139,19 @@ closed
 예시:
 
 ```md
-근거 문서: `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`
+근거 문서: `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`
 ```
 
 사용하지 않는 방식:
 
 ```md
-`docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`
+`docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`
 ```
 
 README 목록에서도 다음처럼 루트 기준 전체 상대 경로를 사용합니다.
 
 ```md
-- `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`: context 디렉토리 이름 변경
+- `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`: context 디렉토리 이름 변경
 ```
 
 ## Decision Candidate (결정 후보)
@@ -198,7 +198,7 @@ README 목록에서도 다음처럼 루트 기준 전체 상대 경로를 사용
 - `docs/plans/README.md`
 - `.project-context/discussions/README.md`
 - `.project-context/reports/README.md`
-- `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`
+- `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`
 
 영향:
 
@@ -206,6 +206,6 @@ README 목록에서도 다음처럼 루트 기준 전체 상대 경로를 사용
 - `docs/plans/README.md`
 - `.project-context/discussions/README.md`
 - `.project-context/README.md`
-- 향후 작성되는 `docs/plans/{scheduled|open|closed}/` 문서
+- 향후 작성되는 `docs/plans/{scheduled|doing|archived}/` 문서
 - 향후 작성되는 `.project-context/discussions/{draft|open|closed}/` 문서
 - 향후 작성되는 `.project-context/reports/` 문서

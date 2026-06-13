@@ -199,7 +199,7 @@ closed
 - `.opencode-context/reports/README.md`
 - `.opencode-context/sessions/README.md`
 - `.opencode-context/assets/README.md`
-- `docs/plans/closed/2026-06-13_11-28-02_docs-context-restructure.md`
+- `docs/plans/archived/2026-06-13_11-28-02_docs-context-restructure.md`
 - `.opencode-context/discussions/closed/2026-06-13_11-38-21_docs-context-restructure.md`
 - `docs/plans/scheduled/2026-06-13_12-18-13_context-directory-rename.md`
 
@@ -212,7 +212,7 @@ closed
 - `.gitignore`
 - `docs/README.md`
 - `docs/plans/README.md`
-- `docs/plans/closed/2026-06-13_11-28-02_docs-context-restructure.md`
+- `docs/plans/archived/2026-06-13_11-28-02_docs-context-restructure.md`
 - `.opencode-context/reports/007-current-opencode-state.md`
 - `.opencode-context/reports/008-docs-context-structure-consistency.md`
 - `.opencode-context/reports/009-plan-discussion-section-policy.md`

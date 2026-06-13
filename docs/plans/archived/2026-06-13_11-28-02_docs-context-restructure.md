@@ -2,9 +2,9 @@
 
 ## Status (상태)
 
-closed
+archived
 
-이 계획서는 모든 항목이 완료되어 닫힌 계획서입니다.
+이 계획서는 모든 항목이 완료되어 보관된 계획서입니다.
 
 ## Summary (요약)
 
@@ -28,7 +28,7 @@ closed
 - `.opencode-context/decisions/`를 삭제합니다.
 - `.opencode-context/decisions/001-opencode-context-directory.md`의 핵심 배경을 `docs/README.md`와 `.opencode-context/README.md`에 흡수합니다.
 - `docs/architectures/README.md`를 추가합니다.
-- `docs/plans/README.md`와 `scheduled`, `open`, `closed` 하위 디렉토리를 정리합니다.
+- `docs/plans/README.md`와 `scheduled`, `doing`, `archived` 하위 디렉토리를 정리합니다.
 - `.opencode-context/discussions/README.md`와 `draft`, `open`, `closed` 하위 디렉토리를 정리합니다.
 - 루트 `docs-context-restructure-discussion.md`를 `.opencode-context/discussions/closed/`로 이동하고 새 논의 문서 스타일에 맞게 최소 갱신합니다.
 - `.opencode-context/reports/README.md`, `.opencode-context/sessions/README.md`, `.opencode-context/assets/README.md`의 `decisions` 또는 예전 `contracts` 경로 언급을 정리합니다.
@@ -93,7 +93,7 @@ closed
 - [x] 2.2. `docs/contracts/README.md`를 새 정책에 맞게 갱신
 - [x] 2.3. `docs/architectures/README.md` 추가
 - [x] 2.4. `docs/plans/README.md` 작성
-- [x] 2.5. `docs/plans/scheduled`, `docs/plans/open`, `docs/plans/closed` 확인
+- [x] 2.5. `docs/plans/scheduled`, `docs/plans/doing`, `docs/plans/archived` 확인
 - [x] 3. `.opencode-context/` 작업 맥락 구조 정리
 - [x] 3.1. `.opencode-context/discussions/draft` 추가
 - [x] 3.2. `.opencode-context/discussions/open` 추가
@@ -126,7 +126,7 @@ closed
 - [x] CL-003: `docs/contracts/README.md`를 새 구조에 맞게 갱신 (done)
 - [x] CL-004: `docs/architectures/README.md` 추가 (done)
 - [x] CL-005: `docs/plans/README.md` 작성 (done)
-- [x] CL-006: `docs/plans/scheduled`, `docs/plans/open`, `docs/plans/closed` 상태 디렉토리 확인 또는 추가 (done)
+- [x] CL-006: `docs/plans/scheduled`, `docs/plans/doing`, `docs/plans/archived` 상태 디렉토리 확인 또는 추가 (done)
 - [x] CL-007: `.opencode-context/discussions/draft`, `.opencode-context/discussions/open`, `.opencode-context/discussions/closed` 상태 디렉토리 추가 (done)
 - [x] CL-008: `.opencode-context/discussions/README.md`를 새 섹션 정책으로 갱신 (done)
 - [x] CL-009: 루트 `docs-context-restructure-discussion.md`를 실제 이동 시각 파일명으로 `.opencode-context/discussions/closed/`에 이동 (done)
@@ -183,8 +183,8 @@ git status --short
 - 2026-06-13: 사용자 답변에 따라 권장 섹션은 전체 고정하고, 문서에서 사용하지 않는 섹션은 `사용하지 않음`으로 명시하는 방향으로 결정했습니다.
 - 2026-06-13: 루트 논의 문서 이동 시 파일명 시간은 실제 이동 시각을 사용하기로 결정했습니다.
 - 2026-06-13: `closed` 논의 문서의 `Absorption Target (흡수 대상)`은 필수로 두기로 결정했습니다.
-- 2026-06-13: 사용자 승인 후 이 계획서를 `docs/plans/open/`으로 이동하고 상태를 `open`으로 변경했습니다.
-- 2026-06-13: 승인된 구조 개편을 완료하고 이 계획서를 `docs/plans/closed/`로 이동했습니다.
+- 2026-06-13: 사용자 승인 후 이 계획서를 `docs/plans/doing/`으로 이동하고 상태를 `doing`으로 변경했습니다.
+- 2026-06-13: 승인된 구조 개편을 완료하고 이 계획서를 `docs/plans/archived/`로 이동했습니다.
 
 ## Result (결과)
 

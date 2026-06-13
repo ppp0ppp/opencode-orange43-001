@@ -2,9 +2,9 @@
 
 ## Status (상태)
 
-closed
+archived
 
-이 계획서는 모든 항목이 완료되어 닫힌 계획서입니다.
+이 계획서는 모든 항목이 완료되어 보관된 계획서입니다.
 
 ## Summary (요약)
 
@@ -52,7 +52,7 @@ closed
 ## Dependencies (의존성)
 
 - 근거 논의: `.project-context/discussions/closed/2026-06-13_12-49-18_path-reference-style.md`
-- 관련 계획: `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`
+- 관련 계획: `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`
 - 영향 문서: `AGENTS.md`, `docs/plans/README.md`, `.project-context/discussions/README.md`
 
 ## Risks (리스크)
@@ -73,7 +73,7 @@ closed
 
 - [x] 1. 승인 후 착수
 - [x] 1.1. `git status` 확인
-- [x] 1.2. 계획서를 `docs/plans/open/`으로 이동하고 `Status`를 `open`으로 변경
+- [x] 1.2. 계획서를 `docs/plans/doing/`으로 이동하고 `Status`를 `doing`으로 변경
 - [x] 2. 규칙 명시
 - [x] 2.1. `AGENTS.md`에 프로젝트 루트 기준 경로 표기 규칙 추가
 - [x] 3. 문서 목록 표준화
@@ -81,7 +81,7 @@ closed
 - [x] 3.2. `.project-context/discussions/README.md` 문서 목록을 루트 기준 경로로 변경
 - [x] 4. 완료 처리
 - [x] 4.1. 체크리스트 완료 처리
-- [x] 4.2. 계획서를 `docs/plans/closed/`로 이동
+- [x] 4.2. 계획서를 `docs/plans/archived/`로 이동
 - [x] 5. 검증
 - [x] 5.1. 현재 정책 문서에서 짧은 상대 문서 목록 잔여 확인
 - [x] 5.2. `git status --short` 확인
@@ -89,13 +89,13 @@ closed
 ## Checklist (전체 체크리스트)
 
 - [x] CL-001: 승인 후 `git status` 확인 (done)
-- [x] CL-002: 계획서를 `docs/plans/open/`으로 이동하고 `Status`를 `open`으로 변경 (done)
+- [x] CL-002: 계획서를 `docs/plans/doing/`으로 이동하고 `Status`를 `doing`으로 변경 (done)
 - [x] CL-003: `AGENTS.md`에 프로젝트 루트 기준 경로 표기 규칙 추가 (done)
 - [x] CL-004: `docs/plans/README.md` 문서 목록을 루트 기준 경로로 변경 (done)
 - [x] CL-005: `.project-context/discussions/README.md` 문서 목록을 루트 기준 경로로 변경 (done)
 - [x] CL-006: 현재 정책 문서에서 짧은 상대 문서 목록 잔여 확인 (done)
 - [x] CL-007: 최종 `git status --short` 확인 (done)
-- [x] CL-008: 계획서를 `docs/plans/closed/`로 이동하고 결과 기록 (done)
+- [x] CL-008: 계획서를 `docs/plans/archived/`로 이동하고 결과 기록 (done)
 
 ## Verification (검증)
 
@@ -131,7 +131,7 @@ git status --short
 - 2026-06-13: 사용자가 README 문서 목록의 짧은 상대 경로도 허용하지 않기로 결정했습니다.
 - 2026-06-13: 사용자가 Markdown 클릭 링크 병기는 필요하지 않다고 결정했습니다.
 - 2026-06-13: 사용자가 규칙은 우선 `AGENTS.md`에 명시하면 된다고 판단했습니다.
-- 2026-06-13: 사용자 승인 후 이 계획서를 `docs/plans/open/`으로 이동하고 상태를 `open`으로 변경했습니다.
+- 2026-06-13: 사용자 승인 후 이 계획서를 `docs/plans/doing/`으로 이동하고 상태를 `doing`으로 변경했습니다.
 - 2026-06-13: `AGENTS.md`에 루트 기준 경로 표기 규칙을 추가하고 README 문서 목록을 루트 기준으로 정리했습니다.
 
 ## Result (결과)
@@ -149,11 +149,11 @@ git status --short
 근거:
 
 - `.project-context/discussions/closed/2026-06-13_12-49-18_path-reference-style.md`
-- `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`
+- `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`
 
 영향:
 
 - `AGENTS.md`
 - `docs/plans/README.md`
 - `.project-context/discussions/README.md`
-- `docs/plans/closed/2026-06-13_12-55-02_path-reference-style.md`
+- `docs/plans/archived/2026-06-13_12-55-02_path-reference-style.md`

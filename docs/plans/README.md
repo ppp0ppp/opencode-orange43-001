@@ -7,8 +7,8 @@
 ## Status Directories (상태 디렉토리)
 
 - `scheduled/`: 아직 미승인인 계획서 또는 승인됐지만 아직 착수하지 않은 계획서
-- `open/`: 실행 중인 계획서
-- `closed/`: 모든 항목이 완료되었거나 명시적으로 중단 처리된 계획서
+- `doing/`: 실행 중인 계획서
+- `archived/`: 모든 항목이 완료되었거나 명시적으로 중단 처리된 계획서
 
 계획서의 디렉토리 상태와 본문 `Status (상태)`는 항상 일치해야 합니다. 상태 이동 시 파일명은 바꾸지 않고 최초 생성 시각을 유지합니다.
 
@@ -43,7 +43,7 @@ YYYY-MM-DD_HH-MM-SS_detail-title.md
 `Status (상태)`:
 
 - 현재 계획서의 상태를 적습니다.
-- 허용 값은 `scheduled`, `open`, `closed`입니다.
+- 허용 값은 `scheduled`, `doing`, `archived`입니다.
 
 `Summary (요약)`:
 
@@ -102,7 +102,7 @@ YYYY-MM-DD_HH-MM-SS_detail-title.md
 
 `Result (결과)`:
 
-- `closed` 상태로 이동할 때 최종 결과를 적습니다.
+- `archived` 상태로 이동할 때 최종 결과를 적습니다.
 
 `References (근거 및 영향 문서)`:
 
@@ -114,12 +114,12 @@ Scheduled:
 
 - 현재 없음
 
-Open:
+Doing:
 
 - 현재 없음
 
-Closed:
+Archived:
 
-- `docs/plans/closed/2026-06-13_11-28-02_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
-- `docs/plans/closed/2026-06-13_12-18-13_context-directory-rename.md`: context 디렉토리 이름 변경
-- `docs/plans/closed/2026-06-13_12-55-02_path-reference-style.md`: 문서 경로 표기 방식 표준화
+- `docs/plans/archived/2026-06-13_11-28-02_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
+- `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`: context 디렉토리 이름 변경
+- `docs/plans/archived/2026-06-13_12-55-02_path-reference-style.md`: 문서 경로 표기 방식 표준화

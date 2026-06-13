@@ -158,12 +158,12 @@ README의 문서 리스팅은 우선 수동 목록으로 두는 것을 권장합
 위치:
 
 - `docs/plans/scheduled/`: 아직 미승인 또는 실행 전 계획서
-- `docs/plans/open/`: 실행 중인 계획서
-- `docs/plans/closed/`: 모든 계획이 완료 처리된 계획서
+- `docs/plans/doing/`: 실행 중인 계획서
+- `docs/plans/archived/`: 모든 계획이 완료 또는 중단 처리된 계획서
 
 필수 섹션:
 
-- `## 상태`: `scheduled`, `open`, `closed` 중 하나
+- `## 상태`: `scheduled`, `doing`, `archived` 중 하나
 - `## 작업 범위`: 본 계획서의 포함 범위와 제외 범위
 - `## Plan Ground`: 일반적으로 분류된 체크리스트 목록
 - `## Plan Tree`: 단계적 트리 형식 체크리스트 목록
@@ -293,8 +293,8 @@ README의 문서 리스팅은 우선 수동 목록으로 두는 것을 권장합
 - `.opencode-context/contracts/`를 `docs/contracts/`로 이동
 - `docs/architectures/` 생성
 - `docs/plans/scheduled/` 생성
-- `docs/plans/open/` 생성
-- `docs/plans/closed/` 생성
+- `docs/plans/doing/` 생성
+- `docs/plans/archived/` 생성
 - `.opencode-context/discussions/draft/` 생성
 - `.opencode-context/discussions/open/` 생성
 - `.opencode-context/discussions/closed/` 생성

@@ -31,14 +31,14 @@
 
 - 아직 승인되지 않은 계획서를 둡니다.
 - 승인됐지만 아직 착수하지 않은 계획서도 둡니다.
-- 실행으로 전환되면 `docs/plans/open`으로 이동합니다.
+- 실행으로 전환되면 `docs/plans/doing`으로 이동합니다.
 
-`docs/plans/open`:
+`docs/plans/doing`:
 
 - 실제 실행 중인 계획서를 둡니다.
 - 여러 계획이 동시에 열릴 수 있으나, 서로 영향을 주면 `Dependencies (의존성)` 또는 `References (근거 및 영향 문서)`에 명시합니다.
 
-`docs/plans/closed`:
+`docs/plans/archived`:
 
 - 모든 항목이 `done` 또는 명시적으로 `aborted` 처리된 계획서를 둡니다.
 - 완료 후 회고나 결과 요약을 남기는 것이 좋습니다.
@@ -89,7 +89,7 @@
 `Status (상태)`:
 
 - 현재 계획서의 상태를 적습니다.
-- 허용 값은 `scheduled`, `open`, `closed`입니다.
+- 허용 값은 `scheduled`, `doing`, `archived`입니다.
 - 파일이 위치한 상태 디렉토리와 본문 상태는 같아야 합니다.
 
 예시:
@@ -245,7 +245,7 @@ scheduled
 
 `Result (결과)`:
 
-- `closed` 상태로 이동할 때 최종 결과를 적습니다.
+- `archived` 상태로 이동할 때 최종 결과를 적습니다.
 - 완료된 변경, 생략된 항목, 후속 계획을 포함할 수 있습니다.
 
 ## 논의 문서 섹션 세트 제안
@@ -430,7 +430,7 @@ open
 `Absorption Target (흡수 대상)`:
 
 - 논의 결과가 어디로 흡수될지 적습니다.
-- 예: `docs/contracts/001-api-boundaries.md`, `docs/plans/open/...`, `AGENTS.md`.
+- 예: `docs/contracts/001-api-boundaries.md`, `docs/plans/doing/...`, `AGENTS.md`.
 
 ## README 반영 방식 제안
 
@@ -443,7 +443,7 @@ open
 - 체크리스트 상태 값
 - 필수 섹션 설명
 - 권장 섹션 설명
-- 문서 목록: scheduled, open, closed
+- 문서 목록: scheduled, doing, archived
 
 `.opencode-context/discussions/README.md`에는 다음 구성이 적합합니다.
 
