@@ -144,3 +144,4 @@ Closed:
 - `.project-context/discussions/closed/2026-06-13_14-02-12_execution-authority-workflow.md`: 실행 권한 계층과 README 워크플로우 표현
 - `.project-context/discussions/closed/2026-06-13_14-43-44_plan-tree-checklist-readability.md`: Plan Tree와 체크리스트 가독성 개선
 - `.project-context/discussions/closed/2026-06-13_15-20-02_project-local-permission-allowlist.md`: 프로젝트 로컬 권한 allowlist 조정
+- `.project-context/discussions/closed/2026-06-13_15-42-07_planning-web-access-policy.md`: 논의/계획 단계 웹 접근 정책

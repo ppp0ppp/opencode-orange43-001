@@ -28,8 +28,8 @@
     "task": "allow",
     "todowrite": "allow",
     "question": "allow",
-    "webfetch": "ask",
-    "websearch": "ask",
+    "webfetch": "allow",
+    "websearch": "allow",
     "skill": "allow",
     "external_directory": {
       "*": "ask",
@@ -41,6 +41,7 @@
       "*": "ask",
       "pwd": "allow",
       "date": "allow",
+      "date +%Y-%m-%d_%H-%M-%S": "allow",
       "ls": "allow",
       "ls *": "allow",
       "git status": "allow",
