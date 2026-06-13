@@ -95,6 +95,10 @@
 ## Git And Worktrees
 
 - git 작업 전에는 `git status`, 필요한 경우 `git diff`, 최근 커밋 맥락을 확인합니다.
+- 이 템플릿 저장소의 기본 흐름은 `feat/* -> dev -> main`입니다.
+- `main`은 바로 클론 가능한 깨끗한 템플릿 브랜치로 유지하고, `dev`는 개발 이력과 논의/계획/보고서/세션을 보존하는 브랜치로 봅니다.
+- 새 템플릿 변경은 명시 지시가 없으면 `dev`에서 분기한 `feat/*`에서 만들고, 검증 후 `dev`에 통합합니다.
+- `dev` 전체를 `main`에 병합하지 않습니다. `main`에는 재사용 가능한 최종 산출물만 경로 단위 checkout, cherry-pick, 또는 작은 패치로 선별 반영합니다.
 - 병렬 개발, 실험, 대규모 변경, 브랜치별 격리가 필요하면 git worktree 사용을 제안합니다.
 - worktree는 가능하면 `~/worktrees/<repo>/<branch-slug>`처럼 재부팅 후에도 유지되는 위치를 선호합니다.
 - worktree 제거 전에는 변경사항 커밋/보존 여부와 merge 여부를 확인합니다.
