@@ -142,3 +142,4 @@ Closed:
 - `.project-context/discussions/closed/2026-06-13_12-49-18_path-reference-style.md`: 문서 경로 표기 방식
 - `.project-context/discussions/closed/2026-06-13_13-17-01_large-work-breakdown-tracking.md`: 대형 작업의 논의와 계획 분할 관리
 - `.project-context/discussions/closed/2026-06-13_14-02-12_execution-authority-workflow.md`: 실행 권한 계층과 README 워크플로우 표현
+- `.project-context/discussions/closed/2026-06-13_14-43-44_plan-tree-checklist-readability.md`: Plan Tree와 체크리스트 가독성 개선
