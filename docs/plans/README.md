@@ -20,6 +20,37 @@
 YYYY-MM-DD_HH-MM-SS_detail-title.md
 ```
 
+대형 계획은 상태 디렉토리 바로 아래에 다음 형식의 디렉토리로 둡니다.
+
+```text
+YYYY-MM-DD_HH-MM-SS_detail-title/
+```
+
+대형 계획 디렉토리는 `main-plan.md`를 기준 문서로 사용합니다. 대형 계획 디렉토리의 외부 상태는 `main-plan.md`의 `Status (상태)`를 따릅니다.
+
+## Large Plans (대형 계획)
+
+대형 계획은 다음 구조를 사용합니다.
+
+```text
+docs/plans/doing/2026-06-13_13-17-01_large-work/
+  main-plan.md
+  scheduled/
+    2026-06-13_13-20-00_sub-plan-a.md
+  doing/
+    2026-06-13_13-25-00_sub-plan-b.md
+  archived/
+    2026-06-13_13-30-00_sub-plan-c.md
+```
+
+- 일반 계획은 상태 디렉토리 바로 아래 `.md` 파일로 둡니다.
+- 대형 계획은 상태 디렉토리 바로 아래 디렉토리로 둡니다.
+- 대형 계획의 내부 상태 디렉토리는 `scheduled/`, `doing/`, `archived/`만 사용합니다.
+- 하위 계획의 상태는 대형 계획 내부 상태 디렉토리와 본문 `Status (상태)`를 따릅니다.
+- 하위 계획은 한 단계만 허용하며 하위 계획 아래에 다시 하위 계획 디렉토리를 만들지 않습니다.
+- 하위 계획 목록과 진행 관리는 `main-plan.md`에서 합니다.
+- README 문서 목록은 상태 디렉토리 바로 아래의 일반 계획과 대형 계획 디렉토리까지만 나열합니다.
+
 ## Checklist States (체크리스트 상태)
 
 - `done`: 완료
@@ -35,6 +66,16 @@ YYYY-MM-DD_HH-MM-SS_detail-title.md
 - [x] CL-003: 항목 설명 (done)
 - [ ] CL-004: 항목 설명 (aborted)
 ```
+
+## Todo Relationship (Todo와 체크리스트 관계)
+
+opencode Todo는 현재 세션 또는 현재 작업 턴의 최소 실행 단위입니다. 계획서의 `Checklist (전체 체크리스트)`는 문서로 보존되는 계획 추적 단위입니다.
+
+- 하나의 Todo 목록이 하나의 계획서 전체를 처리할 수 있습니다.
+- 하나의 Todo 목록이 여러 체크리스트 항목을 처리할 수 있습니다.
+- 하나의 Todo 목록이 단일 체크리스트 항목을 처리할 수 있습니다.
+- 단일 체크리스트 항목을 여러 Todo 목록으로 나누어 처리할 수 있습니다.
+- 간단한 작업은 계획서 없이 Todo만 사용하거나 Todo 없이 바로 진행할 수 있습니다.
 
 ## Required Sections (필수 섹션)
 
@@ -123,3 +164,4 @@ Archived:
 - `docs/plans/archived/2026-06-13_11-28-02_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
 - `docs/plans/archived/2026-06-13_12-18-13_context-directory-rename.md`: context 디렉토리 이름 변경
 - `docs/plans/archived/2026-06-13_12-55-02_path-reference-style.md`: 문서 경로 표기 방식 표준화
+- `docs/plans/archived/2026-06-13_13-31-48_large-work-breakdown-tracking.md`: 대형 작업 분할 관리 규칙 반영

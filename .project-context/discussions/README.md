@@ -20,6 +20,37 @@
 YYYY-MM-DD_HH-MM-SS_detail-title.md
 ```
 
+대형 논의는 상태 디렉토리 바로 아래에 다음 형식의 디렉토리로 둡니다.
+
+```text
+YYYY-MM-DD_HH-MM-SS_detail-title/
+```
+
+대형 논의 디렉토리는 `main-discussion.md`를 기준 문서로 사용합니다. 대형 논의 디렉토리의 외부 상태는 `main-discussion.md`의 `Status (상태)`를 따릅니다.
+
+## Large Discussions (대형 논의)
+
+대형 논의는 다음 구조를 사용합니다.
+
+```text
+.project-context/discussions/open/2026-06-13_13-17-01_large-topic/
+  main-discussion.md
+  draft/
+    2026-06-13_13-20-00_sub-topic-a.md
+  open/
+    2026-06-13_13-25-00_sub-topic-b.md
+  closed/
+    2026-06-13_13-30-00_sub-topic-c.md
+```
+
+- 일반 논의는 상태 디렉토리 바로 아래 `.md` 파일로 둡니다.
+- 대형 논의는 상태 디렉토리 바로 아래 디렉토리로 둡니다.
+- 대형 논의의 내부 상태 디렉토리는 `draft/`, `open/`, `closed/`만 사용합니다.
+- 하위 논의의 상태는 대형 논의 내부 상태 디렉토리와 본문 `Status (상태)`를 따릅니다.
+- 하위 논의는 한 단계만 허용하며 하위 논의 아래에 다시 하위 논의 디렉토리를 만들지 않습니다.
+- 하위 논의 목록과 진행 관리는 `main-discussion.md`에서 합니다.
+- README 문서 목록은 상태 디렉토리 바로 아래의 일반 논의와 대형 논의 디렉토리까지만 나열합니다.
+
 ## Required Sections (필수 섹션)
 
 논의 문서는 아래 섹션 순서를 고정합니다. 특정 문서에서 필요하지 않은 섹션도 삭제하지 않고 `사용하지 않음` 또는 `현재 없음`으로 명시합니다.
@@ -106,3 +137,4 @@ Closed:
 - `.project-context/discussions/closed/2026-06-13_11-38-21_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
 - `.project-context/discussions/closed/2026-06-13_12-13-55_context-directory-rename.md`: context 디렉토리 이름 변경
 - `.project-context/discussions/closed/2026-06-13_12-49-18_path-reference-style.md`: 문서 경로 표기 방식
+- `.project-context/discussions/closed/2026-06-13_13-17-01_large-work-breakdown-tracking.md`: 대형 작업의 논의와 계획 분할 관리
