@@ -58,5 +58,5 @@ YYYY-MM-DD_HH-MM-SS_short-slug.md
 
 ## Risks / Notes (리스크/메모)
 
-주의해야 할 리스크, 미해결 이슈, 관련 discussion/decision 경로를 적습니다.
+주의해야 할 리스크, 미해결 이슈, 관련 discussion, plan, contract, architecture 경로를 적습니다.
 ```

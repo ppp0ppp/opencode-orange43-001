@@ -87,9 +87,9 @@
       "description": "Write a handoff note for continuing work later.",
       "template": "Create a Markdown handoff note under .opencode-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Prioritize what another session needs to continue safely: current goal, state, important decisions, unresolved questions, exact next actions, important files, and commands already run."
     },
-    "decision": {
-      "description": "Record an architectural or harness decision.",
-      "template": "Create a concise decision record under .opencode-context/decisions/ using the next 3-digit sequence number and a short kebab-case title. Include context, decision, rationale, alternatives considered, consequences, and follow-up verification."
+    "discussion": {
+      "description": "Create a structured discussion document.",
+      "template": "Create a structured discussion document under .opencode-context/discussions/draft/ using the filename format YYYY-MM-DD_HH-MM-SS_detail-title.md. Include the fixed sections from .opencode-context/discussions/README.md, mark Status as draft, and use '사용하지 않음' or '현재 없음' for sections that do not apply."
     }
   },
   "tool_output": {
