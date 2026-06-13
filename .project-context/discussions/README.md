@@ -125,7 +125,7 @@ YYYY-MM-DD_HH-MM-SS_detail-title/
 
 - 논의의 근거 문서와 영향을 받을 문서를 적습니다.
 
-## Documents (문서 목록)
+## Active Discussions (현재 논의)
 
 Draft:
 
@@ -133,15 +133,9 @@ Draft:
 
 Open:
 
-- 현재 없음
+- `.project-context/discussions/open/2026-06-13_14-35-20_branch-template-strategy.md`: main/dev 브랜치 기반 템플릿 운영 전략
 
 Closed:
 
-- `.project-context/discussions/closed/2026-06-13_11-38-21_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
-- `.project-context/discussions/closed/2026-06-13_12-13-55_context-directory-rename.md`: context 디렉토리 이름 변경
-- `.project-context/discussions/closed/2026-06-13_12-49-18_path-reference-style.md`: 문서 경로 표기 방식
-- `.project-context/discussions/closed/2026-06-13_13-17-01_large-work-breakdown-tracking.md`: 대형 작업의 논의와 계획 분할 관리
-- `.project-context/discussions/closed/2026-06-13_14-02-12_execution-authority-workflow.md`: 실행 권한 계층과 README 워크플로우 표현
-- `.project-context/discussions/closed/2026-06-13_14-43-44_plan-tree-checklist-readability.md`: Plan Tree와 체크리스트 가독성 개선
-- `.project-context/discussions/closed/2026-06-13_15-20-02_project-local-permission-allowlist.md`: 프로젝트 로컬 권한 allowlist 조정
-- `.project-context/discussions/closed/2026-06-13_15-42-07_planning-web-access-policy.md`: 논의/계획 단계 웹 접근 정책
+- 완료된 논의는 `.project-context/discussions/closed/`에 보관합니다.
+- `closed` 논의는 실행 기준이 아니며, 계속 필요한 결론은 공식 문서나 계획서로 흡수되어 있어야 합니다.
