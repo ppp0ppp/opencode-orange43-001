@@ -121,3 +121,4 @@ Open:
 Closed:
 
 - `closed/2026-06-13_11-28-02_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
+- `closed/2026-06-13_12-18-13_context-directory-rename.md`: context 디렉토리 이름 변경

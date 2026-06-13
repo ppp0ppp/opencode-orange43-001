@@ -2,7 +2,7 @@
 
 작성일: 2026-06-06
 
-업데이트: 2026-06-13 문서 구조 개편으로 계약 문서는 `docs/contracts/`, 아키텍처 문서는 `docs/architectures/`, 계획 문서는 `docs/plans/`, 논의 문서는 `.opencode-context/discussions/{draft|open|closed}/`를 사용합니다. 기존 `decision` command와 `.opencode-context/decisions/` 기준 설명은 더 이상 현재 정책이 아닙니다.
+업데이트: 2026-06-13 문서 구조 개편으로 계약 문서는 `docs/contracts/`, 아키텍처 문서는 `docs/architectures/`, 계획 문서는 `docs/plans/`, 논의 문서는 `.project-context/discussions/{draft|open|closed}/`를 사용합니다. 기존 `decision` command와 `.opencode-context/decisions/` 기준 설명은 더 이상 현재 정책이 아닙니다.
 
 ## 결론
 
@@ -169,9 +169,9 @@ plugin 동작:
 
 - `review`: 현재 변경사항을 code review 관점으로 점검
 - `plan-change`: 수정 전 구현 계획 작성
-- `checkpoint`: `.opencode-context/sessions/`에 세션 체크포인트 작성
+- `checkpoint`: `.project-context/sessions/`에 세션 체크포인트 작성
 - `handoff`: 이어받기용 handoff note 작성
-- `discussion`: `.opencode-context/discussions/draft/`에 structured discussion 작성
+- `discussion`: `.project-context/discussions/draft/`에 structured discussion 작성
 
 평가:
 
@@ -227,8 +227,8 @@ command 구성은 현재 문서 운영 정책과 일치합니다. 보고서, 논
  M AGENTS.md
  M README.md
  M opencode.json
-?? .opencode-context/reports/005-oh-my-opencode-slim-diff.md
-?? .opencode-context/reports/006-slim-absorption-branch.md
+?? .project-context/reports/005-oh-my-opencode-slim-diff.md
+?? .project-context/reports/006-slim-absorption-branch.md
 ?? .opencode/agents/oracle-review.md
 ?? .opencode/skills/simplify/
 ```
@@ -243,7 +243,7 @@ command 구성은 현재 문서 운영 정책과 일치합니다. 보고서, 논
 이 보고서 작성으로 새 파일이 추가됩니다.
 
 ```text
-.opencode-context/reports/007-current-opencode-state.md
+.project-context/reports/007-current-opencode-state.md
 ```
 
 주의:

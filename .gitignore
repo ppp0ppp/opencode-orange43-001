@@ -5,10 +5,10 @@
 graphify-out/
 
 # User-provided transient harness inputs
-.opencode-context/inbox/**
-!.opencode-context/inbox/
-!.opencode-context/inbox/README.md
-!.opencode-context/inbox/.gitkeep
+.project-context/inbox/**
+!.project-context/inbox/
+!.project-context/inbox/README.md
+!.project-context/inbox/.gitkeep
 
 # Python-generated files
 __pycache__/

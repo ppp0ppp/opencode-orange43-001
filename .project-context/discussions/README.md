@@ -1,6 +1,6 @@
 # Discussions (논의)
 
-opencode와 사용자가 결정 전 사고 과정, 질문/답변, 대안, 트레이드오프를 정리하는 위치입니다.
+사용자와 에이전트가 결정 전 사고 과정, 질문/답변, 대안, 트레이드오프를 정리하는 위치입니다.
 
 논의가 끝난 결론은 별도 decisions 디렉토리에 두지 않고 `docs/contracts`, `docs/architectures`, `docs/plans`, 관련 README, `AGENTS.md` 등 공식 문서로 흡수합니다.
 
@@ -104,3 +104,4 @@ Open:
 Closed:
 
 - `closed/2026-06-13_11-38-21_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
+- `closed/2026-06-13_12-13-55_context-directory-rename.md`: context 디렉토리 이름 변경

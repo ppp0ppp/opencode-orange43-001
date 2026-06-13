@@ -1,6 +1,6 @@
 # Inbox
 
-사용자가 opencode 하네스/에이전트에 넘기는 외부 입력을 임시로 두는 공간입니다.
+사용자가 에이전트에 넘기는 외부 입력을 임시로 두는 공간입니다.
 
 ## Purpose
 
@@ -12,7 +12,7 @@
 
 - 이 디렉토리의 실제 입력 파일은 기본적으로 git에 커밋하지 않습니다.
 - 민감정보, 토큰, 개인정보, 내부 URL이 포함될 수 있으므로 외부 모델 전송 전에 확인합니다.
-- 장기 보존할 자료는 필요한 민감정보를 제거한 뒤 `.opencode-context/assets/`로 승격합니다.
+- 장기 보존할 자료는 필요한 민감정보를 제거한 뒤 `.project-context/assets/`로 승격합니다.
 - 공식 사용자/개발자 문서가 된 자료는 `docs/`로 옮깁니다.
 
 ## Suggested Layout
@@ -20,7 +20,7 @@
 날짜별 하위 디렉토리를 권장합니다.
 
 ```text
-.opencode-context/inbox/
+.project-context/inbox/
   2026-06-07/
     login-error.png
     api-response.txt
@@ -29,7 +29,7 @@
 ## opencode Attachment Example
 
 ```bash
-opencode run --file .opencode-context/inbox/2026-06-07/login-error.png "이 화면 문제를 분석해줘"
+opencode run --file .project-context/inbox/2026-06-07/login-error.png "이 화면 문제를 분석해줘"
 ```
 
 이미지/PDF가 실제 vision 입력으로 처리되는지는 사용하는 provider/model의 멀티모달 지원 여부에 따릅니다.

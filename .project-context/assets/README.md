@@ -5,7 +5,7 @@
 ## Purpose
 
 - 보고서, 논의, 공식 문서에서 계속 참조할 이미지, 다이어그램, 샘플 문서를 보관합니다.
-- `.opencode-context/inbox/`의 임시 원자료 중 보존 가치가 있는 파일을 정리해 승격합니다.
+- `.project-context/inbox/`의 임시 원자료 중 보존 가치가 있는 파일을 정리해 승격합니다.
 
 ## Policy
 
@@ -19,7 +19,7 @@
 짧은 kebab-case 이름을 권장합니다.
 
 ```text
-.opencode-context/assets/
+.project-context/assets/
   auth-flow-diagram.png
   failing-screen-login.png
 ```

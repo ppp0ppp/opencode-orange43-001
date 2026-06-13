@@ -80,16 +80,16 @@
       "template": "Analyze the requested change and produce a concise implementation plan. Include assumptions, likely files to touch, verification steps, and risks. Do not edit files."
     },
     "checkpoint": {
-      "description": "Write a session checkpoint under .opencode-context/sessions.",
-      "template": "Create a concise Markdown checkpoint under .opencode-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Include goal, current status, completed work, next steps, open questions, important files, commands run, and risks/notes. Keep it as a checkpoint, not a full transcript."
+      "description": "Write a session checkpoint under .project-context/sessions.",
+      "template": "Create a concise Markdown checkpoint under .project-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Include goal, current status, completed work, next steps, open questions, important files, commands run, and risks/notes. Keep it as a checkpoint, not a full transcript."
     },
     "handoff": {
       "description": "Write a handoff note for continuing work later.",
-      "template": "Create a Markdown handoff note under .opencode-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Prioritize what another session needs to continue safely: current goal, state, important decisions, unresolved questions, exact next actions, important files, and commands already run."
+      "template": "Create a Markdown handoff note under .project-context/sessions/ using the filename format YYYY-MM-DD_HH-MM-SS_short-slug.md. Prioritize what another session needs to continue safely: current goal, state, important decisions, unresolved questions, exact next actions, important files, and commands already run."
     },
     "discussion": {
       "description": "Create a structured discussion document.",
-      "template": "Create a structured discussion document under .opencode-context/discussions/draft/ using the filename format YYYY-MM-DD_HH-MM-SS_detail-title.md. Include the fixed sections from .opencode-context/discussions/README.md, mark Status as draft, and use '사용하지 않음' or '현재 없음' for sections that do not apply."
+      "template": "Create a structured discussion document under .project-context/discussions/draft/ using the filename format YYYY-MM-DD_HH-MM-SS_detail-title.md. Include the fixed sections from .project-context/discussions/README.md, mark Status as draft, and use '사용하지 않음' or '현재 없음' for sections that do not apply."
     }
   },
   "tool_output": {

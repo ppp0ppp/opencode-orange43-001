@@ -2,13 +2,13 @@
 
 ## Status (상태)
 
-draft
+closed
 
 ## Summary (요약)
 
 현재 `.opencode-context/`는 opencode 전용 설정이 아니라 프로젝트 작업 맥락, 논의, 보고서, 세션, 입력 자료, 보존 자료를 담는 공간입니다. 의미상 특정 도구 이름인 `opencode`에 묶는 것보다 `.project-context/`처럼 프로젝트 중심 이름으로 바꾸는 것이 더 자연스럽습니다.
 
-현재 추천안은 `.opencode-context/`를 `.project-context/`로 변경하는 것입니다. 다만 경로가 `AGENTS.md`, `opencode.json`, `.gitignore`, README, 보고서, 계획서, 논의 문서, 세션 문서 전체에 넓게 퍼져 있으므로 단순 디렉토리 rename이 아니라 경로 정책 전체 정합성 수정으로 다뤄야 합니다.
+최종 결론은 `.opencode-context/`를 `.project-context/`로 변경하는 것입니다. 다만 경로가 `AGENTS.md`, `opencode.json`, `.gitignore`, README, 보고서, 계획서, 논의 문서, 세션 문서 전체에 넓게 퍼져 있으므로 단순 디렉토리 rename이 아니라 경로 정책 전체 정합성 수정으로 다룹니다.
 
 ## Background (배경)
 
@@ -154,7 +154,7 @@ draft
 
 ## Decision Candidate (결정 후보)
 
-현재 결정 후보:
+채택된 결정:
 
 - `.opencode-context/`를 `.project-context/`로 변경합니다.
 - 새 공식 정의는 “프로젝트 작업 맥락과 에이전트 협업 산출물을 보관하는 디렉토리”로 합니다.
@@ -162,36 +162,29 @@ draft
 
 ## Questions (질문)
 
-- 새 이름은 `.project-context`로 확정해도 됩니까?
-- 과거 완료 문서의 본문 경로도 전부 새 경로로 치환할까요, 아니면 역사적 설명은 보존하고 상단 업데이트 메모만 추가할까요?
-- `.opencode-context`에서 `.project-context`로 이동한 뒤, 이전 경로 호환을 위한 symlink나 안내 파일 없이 완전히 제거해도 됩니까?
-- 방금 추가한 `.gitkeep` 정리 변경과 이 rename 작업을 같은 커밋으로 묶을까요, 아니면 먼저 `.gitkeep` 변경을 별도 커밋하고 rename을 별도 계획으로 진행할까요?
+- 새 이름은 `.project-context`로 확정했습니다.
+- 과거 완료 문서의 본문 경로는 역사적 설명 보존을 위해 일괄 치환하지 않습니다.
+- `.opencode-context`에서 `.project-context`로 이동한 뒤, 이전 경로 호환을 위한 symlink나 안내 파일 없이 완전히 제거합니다.
+- `.gitkeep` 정리 변경과 이 논의 초안은 먼저 커밋했고, rename 구현은 별도 계획 승인 후 진행합니다.
 
 ## Open Issues (열린 쟁점)
 
-- 과거 보고서에는 `.opencode-context`가 “당시 구조”로 등장합니다. 전체 치환은 현재 경로 정합성은 높이지만 과거 맥락을 일부 왜곡할 수 있습니다.
-- `opencode.json` 변경은 opencode 재시작 후 반영됩니다.
-- rename 후 현재 실행 중인 세션의 시스템 지침은 즉시 바뀌지 않을 수 있으므로, 변경 완료 후 재시작 안내가 필요합니다.
+현재 없음.
 
 ## Resolution (정리 결과)
 
-현재 없음: 이 문서는 draft 상태이며 아직 최종 결론이 없습니다.
+이 논의의 결론은 `docs/plans/scheduled/2026-06-13_12-18-13_context-directory-rename.md` 계획서로 흡수했습니다.
+
+최종 결정:
+
+- 작업 맥락 디렉토리 이름은 `.project-context`로 변경합니다.
+- 과거 완료 문서의 역사적 `.opencode-context` 본문 설명은 보존합니다.
+- 이전 `.opencode-context` 경로에는 symlink나 안내 파일을 남기지 않습니다.
+- 구현은 계획서 승인 후 진행합니다.
 
 ## Absorption Target (흡수 대상)
 
-현재 없음: closed 상태로 이동할 때 흡수 대상 문서를 기록합니다.
-
-예상 흡수 대상:
-
-- `AGENTS.md`
-- `opencode.json`
-- `.gitignore`
-- `.project-context/README.md`
-- `.project-context/discussions/README.md`
-- `.project-context/reports/README.md`
-- `.project-context/sessions/README.md`
-- `.project-context/assets/README.md`
-- `docs/README.md`
+- `docs/plans/scheduled/2026-06-13_12-18-13_context-directory-rename.md`
 - `docs/plans/README.md`
 
 ## References (근거 및 영향 문서)
@@ -208,6 +201,7 @@ draft
 - `.opencode-context/assets/README.md`
 - `docs/plans/closed/2026-06-13_11-28-02_docs-context-restructure.md`
 - `.opencode-context/discussions/closed/2026-06-13_11-38-21_docs-context-restructure.md`
+- `docs/plans/scheduled/2026-06-13_12-18-13_context-directory-rename.md`
 
 영향:
 
