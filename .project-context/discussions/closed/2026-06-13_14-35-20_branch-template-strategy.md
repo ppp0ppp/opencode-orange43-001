@@ -2,13 +2,13 @@
 
 ## Status (상태)
 
-open
+closed
 
 ## Summary (요약)
 
 이 논의는 저장소의 `main`과 `dev` 브랜치를 서로 다른 목적의 작업면으로 분리하는 운영 규칙을 정리합니다.
 
-현재 선호안은 `main`을 바로 클론해서 사용할 수 있는 깨끗한 템플릿 브랜치로 유지하고, `dev`에는 현재와 같은 논의, 계획, 보고서, 세션 등 구조 생성 과정과 운영 이력을 남기는 것입니다.
+최종 결론은 `main`을 바로 클론해서 사용할 수 있는 깨끗한 템플릿 브랜치로 유지하고, `dev`에는 현재와 같은 논의, 계획, 보고서, 세션 등 구조 생성 과정과 운영 이력을 남기는 것입니다.
 
 추가 개발은 `feat/xxx` 브랜치에서 진행한 뒤 `dev`로 병합하고, `main`에는 규약 문서, 디렉토리 구조, 공용 tool/skill/plugin 업데이트처럼 템플릿 사용자에게 필요한 최소 산출물만 선별 반영합니다.
 
@@ -199,32 +199,63 @@ New changes are developed in `feat/*`, merged into `dev`, and then selectively p
 ## Questions (질문)
 
 - `main`에서 `.project-context/README.md`와 하위 디렉토리 README는 유지하고 실제 문서만 제거하는 방식이 맞습니까?
+  답변: 맞습니다. README는 구조 설명에 필요하고, 실제 문서만 제거합니다.
 - `docs/plans/README.md`는 유지하되 `scheduled/`, `doing/`, `archived/` 내부는 `.gitkeep`만 둘까요?
+  답변: 맞습니다. README는 유지하고 하위 상태 디렉토리는 `.gitkeep`로 유지합니다.
 - `main`에서 `.project-context/reports/README.md`는 유지할까요, 아니면 reports 디렉토리 자체를 `.gitkeep`만 두고 README도 최소화할까요?
+  답변: `reports/README.md`는 유지하되, 보고서는 main에 기본 포함하지 않는다는 점을 명시합니다.
 - `main`에 `.opencode/skills/graphify`와 `.opencode/plugins/graphify.js` 같은 공용 기능은 그대로 유지할까요?
+  답변: 유지합니다. graphify skill/plugin은 공용 기능입니다. 단, hook/MCP/외부 backend는 기본 비활성 유지합니다.
 - `dev -> main` 선별 반영은 cherry-pick, checkout path, 별도 release branch 중 어떤 방식으로 운용할까요?
+  답변: 초기에는 `checkout path` 방식으로 운용합니다. `dev`에서 필요한 파일만 `main`으로 가져옵니다.
 - 이 브랜치 정책은 `README.md`만으로 충분할까요, 아니면 `AGENTS.md`와 `docs/`에도 반영할까요?
+  답변: `README.md`에 간략 명시하고, `AGENTS.md`에는 작업 규칙으로 짧게 반영합니다.
 
 ## Open Issues (열린 쟁점)
 
 - `main`에서 제거할 실제 문서 목록과 유지할 템플릿 README 목록을 확정해야 합니다.
+  정리: 계획서에서 제거/유지 목록을 확정합니다.
 - `main`의 빈 디렉토리 구조를 `.gitkeep`으로 유지할지, README 파일로 유지할지 정해야 합니다.
+  정리: README가 필요한 디렉토리는 README를 유지하고, 빈 상태 디렉토리는 `.gitkeep`로 유지합니다.
 - `dev` 브랜치가 아직 없다면 생성 기준과 시작점을 정해야 합니다.
+  정리: 계획서에서 현재 main 상태를 dev 보존 시작점으로 삼는 절차를 다룹니다.
 - `main`을 깨끗하게 만들 때 기존 이력을 보존하는 방식과 merge 전략을 정해야 합니다.
+  정리: dev에 현재 이력을 보존하고 main은 선별 정리합니다.
 - 이후 `feat/*` 브랜치 명명 규칙과 커밋/병합 규칙을 `AGENTS.md`에 반영할지 결정해야 합니다.
+  정리: AGENTS에 짧게 반영합니다.
 
 ## Resolution (정리 결과)
 
-현재 없음
+사용자 승인에 따라 다음 결론으로 확정합니다.
+
+- `main`은 바로 클론 가능한 깨끗한 템플릿 브랜치로 유지합니다.
+- `dev`는 현재 문서, 논의, 계획, 보고서, 세션 등 생성 과정과 운영 이력을 보존하는 개발 브랜치로 둡니다.
+- 새 작업은 `feat/xxx`에서 시작하고 완성 후 `dev`에 병합합니다.
+- `main`에는 `dev` 전체를 병합하지 않고 재사용 가능한 최종 산출물만 선별 반영합니다.
+- `main`에는 실제 논의, 보고서, 세션, 완료 계획 문서를 남기지 않습니다.
+- `main`에는 `README.md`, `AGENTS.md`, `PROJECT.md`, `opencode.json`, `.opencode/` 공용 기능, `docs/`와 `.project-context/`의 구조 README, 빈 디렉토리 유지 파일을 남깁니다.
+- `.project-context/README.md`와 하위 README는 유지하되 실제 문서는 제거합니다.
+- `docs/plans/README.md`는 유지하고 상태 디렉토리는 `.gitkeep`로 유지합니다.
+- `reports/README.md`는 유지하되, 보고서는 main에 기본 포함하지 않는다고 명시합니다.
+- graphify skill/plugin은 공용 기능으로 유지합니다. hook/MCP/외부 backend는 기본 비활성으로 유지합니다.
+- `dev -> main` 선별 반영은 초기에는 checkout path 방식으로 운용합니다.
+- 브랜치 정책은 `README.md`에 간략 명시하고, `AGENTS.md`에는 작업 규칙으로 짧게 반영합니다.
+
+이 결론은 다음 계획서로 흡수합니다.
+
+- `docs/plans/scheduled/2026-06-13_16-00-11_branch-template-strategy.md`
 
 ## Absorption Target (흡수 대상)
 
-확정 시 다음 문서로 흡수할 후보입니다.
+다음 계획서로 흡수합니다.
+
+- `docs/plans/scheduled/2026-06-13_16-00-11_branch-template-strategy.md`
+
+계획 실행 후 다음 문서 또는 브랜치 상태에 반영합니다.
 
 - `README.md`
 - `AGENTS.md`
-- 필요 시 `docs/README.md`
-- 필요 시 별도 공식 문서
+- `main`, `dev`, `feat/*` 브랜치 운영 상태
 
 ## References (근거 및 영향 문서)
 

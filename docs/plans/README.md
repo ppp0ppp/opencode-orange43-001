@@ -222,7 +222,7 @@ Scheduled:
 
 Doing:
 
-- 현재 없음
+- `docs/plans/doing/2026-06-13_16-00-11_branch-template-strategy.md`: main/dev 브랜치 기반 템플릿 운영 전략 반영
 
 Archived:
 

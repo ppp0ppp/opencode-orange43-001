@@ -133,7 +133,7 @@ Draft:
 
 Open:
 
-- `.project-context/discussions/open/2026-06-13_14-35-20_branch-template-strategy.md`: main/dev 브랜치 기반 템플릿 운영 전략
+- 현재 없음
 
 Closed:
 
