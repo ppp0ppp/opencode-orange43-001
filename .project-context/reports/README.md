@@ -17,8 +17,8 @@
 - 사용자가 판단해야 하는 큰 맥락은 보고서로 정리합니다.
 - 외부 도구, plugin, skill, harness를 도입하기 전에는 검토 보고서를 남깁니다.
 - 실험 결과는 결론, 관찰, 리스크, 다음 단계 중심으로 작성합니다.
-- 장기적으로 확정된 판단은 `../../docs/contracts/`, `../../docs/architectures/`, `../../docs/plans/` 또는 관련 README에 흡수합니다.
-- 계약 경계면과 관련된 내용은 필요 시 `../../docs/contracts/`에도 반영합니다.
+- 장기적으로 확정된 판단은 `docs/contracts/`, `docs/architectures/`, `docs/plans/` 또는 관련 README에 흡수합니다.
+- 계약 경계면과 관련된 내용은 필요 시 `docs/contracts/`에도 반영합니다.
 
 ## Template
 

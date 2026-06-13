@@ -103,5 +103,6 @@ Open:
 
 Closed:
 
-- `closed/2026-06-13_11-38-21_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
-- `closed/2026-06-13_12-13-55_context-directory-rename.md`: context 디렉토리 이름 변경
+- `.project-context/discussions/closed/2026-06-13_11-38-21_docs-context-restructure.md`: docs 및 `.opencode-context` 문서 구조 재조정
+- `.project-context/discussions/closed/2026-06-13_12-13-55_context-directory-rename.md`: context 디렉토리 이름 변경
+- `.project-context/discussions/closed/2026-06-13_12-49-18_path-reference-style.md`: 문서 경로 표기 방식

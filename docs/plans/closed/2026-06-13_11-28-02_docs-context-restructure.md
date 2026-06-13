@@ -150,7 +150,7 @@ closed
 검증 항목:
 
 - `git status --short`로 이동, 삭제, 추가 파일을 확인합니다.
-- 텍스트 검색으로 `.opencode-context/contracts`, `.opencode-context/decisions`, `../decisions`, `../contracts`의 잔여 언급을 확인합니다.
+- 텍스트 검색으로 `.opencode-context/contracts`, `.opencode-context/decisions`, `.opencode-context/decisions`, `.opencode-context/contracts`의 잔여 언급을 확인합니다.
 - `docs/contracts`, `docs/architectures`, `docs/plans`, `.opencode-context/discussions`의 README가 존재하는지 확인합니다.
 - 계획 문서와 논의 문서 README의 필수/권장 섹션 순서가 고정되어 있는지 확인합니다.
 - 이동된 루트 논의 문서가 `.opencode-context/discussions/closed/`에 있고 `Status (상태)`가 `closed`인지 확인합니다.

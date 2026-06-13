@@ -263,15 +263,15 @@ README의 문서 리스팅은 우선 수동 목록으로 두는 것을 권장합
 
 `.opencode-context/reports/README.md`:
 
-- 장기적으로 확정된 결정은 `../decisions/`로 기록한다고 설명합니다.
-- 계약 경계면 관련 내용은 `../contracts/`에 반영한다고 설명합니다.
+- 장기적으로 확정된 결정은 `.opencode-context/decisions/`로 기록한다고 설명합니다.
+- 계약 경계면 관련 내용은 `.opencode-context/contracts/`에 반영한다고 설명합니다.
 - 새 구조에서는 각각 `docs/architectures`, `docs/plans`, `docs/contracts` 등을 참조해야 합니다.
 
 `.opencode-context/discussions/README.md`:
 
 - 기존 상태 값이 `Draft | In Discussion | Decided | Superseded`입니다.
 - 새 상태 값인 `draft | open | closed`와 상태 하위 디렉토리 구조로 재작성해야 합니다.
-- 확정 결론을 `../decisions/`로 승격한다는 설명을 제거해야 합니다.
+- 확정 결론을 `.opencode-context/decisions/`로 승격한다는 설명을 제거해야 합니다.
 
 `.opencode-context/assets/README.md`:
 
